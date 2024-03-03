@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="inves__3_-removebg-preview.png" type="image/x-icon">
+    <title>Cógela suave</title>
+</head>
+
+<body style="background-color: #ffffff;">
+
+    <header>
+        <div class="banner-content">
+            <div class="logo">
+                <img src="Rentabilidad-removebg-preview (3).png" alt="Logo">
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="emociones.html">Mis emociones</a></li>
+                <li><a href="actividades.html">Mis actividades</a></li>
+                <li><a href="capsulas.html">Cápsulas</a></li>
+                <li><a href="amigos.html">Haz amigos</a></li>
+                <li><a href="cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="left-column">
+        <div class="agenda">
+            <h1>Registro de Emociones</h1>
+            <form>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="emocion">Emoción:</label>
+        <select id="emocion" name="emocion" required>
+            <option value="1">Seleccione una opción</option>
+            <option value="feliz">😊 Feliz</option>
+            <option value="triste">😢 Triste</option>
+            <option value="enojado">😠 Enojado</option>
+            <option value="asombrado">😲 Asombrado</option>
+        </select>
+
+        <label for="comentarios">Observaciones :</label>
+        <textarea id="comentarios" name="comentarios" rows="10"></textarea>
+
+        <br><br>
+
+        <button type="submit">Registrar Emoción</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 App Cógela suave</p>
+</footer>
+
+</body>
+</html>

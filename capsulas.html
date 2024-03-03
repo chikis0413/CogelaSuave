@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="inves__3_-removebg-preview.png" type="image/x-icon">
+    <title>Cógela suave</title>
+</head>
+
+<body style="background-color: #ffffff;">
+
+    <header>
+        <div class="banner-content">
+            <div class="logo">
+                <img src="Rentabilidad-removebg-preview (3).png" alt="Logo">
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="emociones.html">Mis emociones</a></li>
+                <li><a href="actividades.html">Mis actividades</a></li>
+                <li><a href="capsulas.html">Cápsulas</a></li>
+                <li><a href="amigos.html">Haz amigos</a></li>
+                <li><a href="cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="informacion">
+                <h1>Depresión</h1>
+                <p>Fecha: <span id="fecha"></span></p>
+                <p style="text-align: left;">
+                    El trastorno depresivo (o depresión) es un trastorno mental común. Implica un estado de ánimo deprimido o la pérdida del placer o el interés por actividades durante largos períodos de tiempo.
+                    <br><br>
+                    La depresión es distinta de los cambios habituales del estado de ánimo y los sentimientos sobre el día a día. Puede afectar a todos los ámbitos de la vida, incluidas las relaciones familiares, de amistad y las comunitarias. Puede deberse a problemas en la escuela y laborales o causarlos.
+                </p>
+                <a href="#" class="leer-mas-btn" onclick="mostrarDetalle()">Leer más</a>
+            </div>
+                    <div class="button-container">
+                       <button type="button" onclick="window.open('https://www.who.int/es/news-room/fact-sheets/detail/depression', '_blank')">Leer más</button>
+                    </div> 
+                </div>
+            </div>
+                   
+            
+    <div class="row-space"></div>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="informacion">
+                <h1>Endorfinas</h1>
+                <p>Fecha: <span id="fecha"></span></p>
+                <p style="text-align: left;">
+                    Las endorfinas son pequeñas proteínas que  tienen una estructura química muy parecida a la morfina, por eso se denominan como “morfina endógena”, es decir, producida por nuestro organismo. Éstas, funcionan como neurotransmisores, estimulando receptores especializados en el sistema nervioso central, produciendo así la sensación de bienestar.
+                </p>
+                <a href="#" class="leer-mas-btn" onclick="mostrarDetalle()">Leer más</a>
+            </div>
+                    <div class="button-container">
+                       <button type="button" onclick="window.open('https://www.ccdm.cl/noticia/endorfinas-las-llamadas-hormonas-de-la-felicidad/', '_blank')">Leer más</button>
+                    </div> 
+                </div>
+            </div>
+
+    <div class="row-space"></div>
+
+            <div class="container">
+                <div class="left-column">
+                    <div class="informacion">
+                        <h1>Trastornos mentales</h1>
+                        <p>Fecha: <span id="fecha"></span></p>
+                        <p style="text-align: left;">
+                            Un trastorno mental se caracteriza por una alteración clínicamente significativa de la cognición, la regulación de las emociones o el comportamiento de un individuo. Por lo general, va asociado a angustia o a discapacidad funcional en otras áreas importantes. Hay muchos tipos diferentes de trastornos mentales. También se denominan problemas de salud mental, aunque este último término es más amplio y abarca los trastornos mentales, las discapacidades psicosociales y (otros) estados mentales asociados a una angustia considerable, discapacidad funcional o riesgo de conducta autolesiva. Esta nota descriptiva se centra en los trastornos mentales según se describen en la Undécima revisión de la Clasificación Internacional de Enfermedades (CIE-11)
+                        </p>
+                        <a href="#" class="leer-mas-btn" onclick="mostrarDetalle()">Leer más</a>
+                    </div>
+                            <div class="button-container">
+                               <button type="button" onclick="window.open('https://www.who.int/es/news-room/fact-sheets/detail/mental-disorders', '_blank')">Leer más</button>
+                            </div> 
+                        </div>
+                    </div>
+        
+        
+        <script>
+            // Función para obtener la fecha actual
+            function obtenerFecha() {
+                const fechaElemento = document.getElementById('fecha');
+                const fechaActual = new Date();
+                const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                fechaElemento.textContent = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+            }
+    
+            // Función para mostrar el detalle al hacer clic en "Leer más"
+            function mostrarDetalle() {
+                alert('Detalles completos del contenido.');
+                // Puedes redirigir a otra página o mostrar más información según tus necesidades.
+            }
+    
+            // Llama a la función para obtener la fecha actual al cargar la página
+            obtenerFecha();
+        </script>
+
+<footer>
+    <p>&copy; 2024 App Cógela suave</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="inves__3_-removebg-preview.png" type="image/x-icon">
+    <title>Cógela suave</title>
+
+    <script type='importmap'>
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.11",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.11"
+        }
+      }
+    </script>
+    <script type='module'>
+      import { Calendar } from '@fullcalendar/core'
+      import dayGridPlugin from '@fullcalendar/daygrid'
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar')
+        const calendar = new Calendar(calendarEl, {
+          plugins: [dayGridPlugin],
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+          }
+        })
+        calendar.render()
+      })
+    </script>
+  </head>
+  <body style="background-color: #ffffff;">
+
+    <header>
+        <div class="banner-content">
+            <div class="logo">
+                <img src="Rentabilidad-removebg-preview (3).png" alt="Logo">
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="emociones.html">Mis emociones</a></li>
+                <li><a href="actividades.html">Mis actividades</a></li>
+                <li><a href="capsulas.html">Cápsulas</a></li>
+                <li><a href="amigos.html">Haz amigos</a></li>
+                <li><a href="cuenta.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id='calendar'></div>
+
+    <div class="row-space"></div>
+
+    <div class="left-column">
+        <div class="agenda">
+        <h1>Mi Agenda</h1>
+        <div id="historial"></div>
+        <form id="formulario">
+            <label for="evento">Evento:</label>
+            <input type="text" id="evento" required>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+            
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" required></textarea>
+
+            <br><br>
+            
+            <button type="button" onclick="agregarEvento()">Agregar Evento</button>
+        </form>
+    </div>
+  
+    <script>
+      // Función para agregar un nuevo evento al historial
+      function agregarEvento() {
+          const eventoInput = document.getElementById('evento');
+          const evento = eventoInput.value;
+
+          if (evento.trim() !== "") {
+              const historial = document.getElementById('historial');
+              const nuevoEvento = document.createElement('li');
+              nuevoEvento.className = 'evento';
+              nuevoEvento.textContent = evento;
+              historial.appendChild(nuevoEvento);
+
+              // Limpiar el input después de agregar el evento
+              eventoInput.value = "";
+          }
+      }
+  </script>
+
+  <footer>
+    <p>&copy; 2024 App Cógela suave</p>
+</footer>
+
+  </body>
+</html>
